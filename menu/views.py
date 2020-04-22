@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from . import models
 # Create your views here.
 
 
 def menu(request):
-    return HttpResponse('<h1>hrehe</h1>')
+    context = {'menu': menu}
+    return render(request, 'menu/menu.html', context)
